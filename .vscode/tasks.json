@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks"  : 
+    [
+        {
+            "label"  : "cmake_generate",
+            "type"   : "shell",
+            "command": "cmake -GNinja -Bbuild"
+        },
+        {
+            "label"  : "ninja_build",
+            "type"   : "shell",
+            "command": "ninja -C build"
+        },
+        {
+            "label"  : "run_executable",
+            "type"   : "shell",
+            "command": "./build/${workspaceFolderBasename}.exe"
+        },
+        {
+            "label"       : "build_and_run",
+            "type"        : "shell",
+            "dependsOrder": "sequence",
+            "dependsOn"   : 
+            [
+                "cmake_generate",
+                "ninja_build",
+                "run_executable"
+            ],
+            "command": "echo \"All tasks executed successfully.\""
+        }
+    ]
+}

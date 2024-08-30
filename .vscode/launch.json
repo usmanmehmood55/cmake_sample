@@ -1,0 +1,18 @@
+{
+    "configurations": [
+    {
+        "name"           : "Debug Config",
+        "preLaunchTask"  : "build_and_run",
+        "type"           : "cppdbg",
+        "request"        : "launch",
+        "program"        : "${workspaceRoot}/build/${workspaceFolderBasename}.exe",
+        "args"           : [],
+        "stopAtEntry"    : true,
+        "cwd"            : "${workspaceRoot}",
+        "environment"    : [],
+        "externalConsole": false,
+        "MIMode"         : "gdb",
+        "miDebuggerPath" : "C:/Users/u.mehmood/scoop/shims/gdb.exe",
+    }
+    ]
+}
